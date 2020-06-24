@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BookListComponent } from './landing/book-list/book-list.component';
 import { BookDeatilsComponent } from './landing/book-deatils/book-deatils.component';
 import { BookDetailsComponent } from './landing/book-details/book-details.component';
+import { UpdateBookComponent } from './landing/update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BookDetailsComponent } from './landing/book-details/book-details.compon
     CreateBookComponent,
     BookListComponent,
     BookDeatilsComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,

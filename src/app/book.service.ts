@@ -21,11 +21,11 @@ export class BookService {
   }
 
   updateBook(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+    return this.http.put(`${this.baseUrl}/update`, value);
   }
 
   deleteBook(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+    return this.http.delete(`${this.baseUrl}/delete-one/${id}`, { responseType: 'text' });
   }
 
   getBooksList(): Observable<any> {

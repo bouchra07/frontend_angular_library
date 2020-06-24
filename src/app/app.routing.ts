@@ -9,6 +9,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { CreateBookComponent } from './landing/create-book/create-book.component';
+import { UpdateBookComponent } from './landing/update-book/update-book.component';
 
 
 const routes: Routes =[
@@ -18,6 +19,7 @@ const routes: Routes =[
     { path: 'landing',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
     { path: 'add',          component: CreateBookComponent },
+    { path: 'update/:id', component: UpdateBookComponent },
 
     { path: '', redirectTo: 'landing', pathMatch: 'full' }
 ];
