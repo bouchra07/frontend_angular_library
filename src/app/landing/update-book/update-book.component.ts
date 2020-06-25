@@ -42,4 +42,8 @@ export class UpdateBookComponent implements OnInit {
   gotoList() {
     this.router.navigate(['/']);
   }
+
+  list(){
+    this.router.navigate(['landing']);
+  }
 }

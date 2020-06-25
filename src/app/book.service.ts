@@ -31,4 +31,8 @@ export class BookService {
   getBooksList(): Observable<any> {
     return this.http.get(`${this.baseUrl}/find-all`)
   }
+  
+  searchBooksList(search: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/search/${search}`);
+  }
 }

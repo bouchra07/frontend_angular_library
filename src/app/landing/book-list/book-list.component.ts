@@ -1,4 +1,3 @@
-import { BookDetailsComponent } from '../book-details/book-details.component';
 import { Observable } from "rxjs";
 import { BookService } from "../../book.service";
 import { Book } from "../../book";
@@ -38,8 +37,13 @@ export class BookListComponent implements OnInit {
   }
 
 
+
   bookDetails(id: number){
     this.router.navigate(['details', id]);
+  }
+
+  bookSearch(search: string){
+    this.router.navigate(['search', search]);
   }
 
   updateBook(id: number){
