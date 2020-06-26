@@ -14,17 +14,17 @@ import { UpdateBookComponent } from './landing/update-book/update-book.component
 
 
 const routes: Routes =[
-    { path: 'home',             component: HomeComponent },
+    { path: 'landing',             component: HomeComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'register',           component: SignupComponent },
-    { path: 'landing',          component: LandingComponent },
+    { path: 'home',          component: LandingComponent },
     { path: 'login',          component: LoginComponent },
     { path: 'add',          component: CreateBookComponent },
     { path: 'update/:id', component: UpdateBookComponent },
     { path: 'search/:search', component: SearchBookComponent },
 
 
-    { path: '', redirectTo: 'landing', pathMatch: 'full' }
+    { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({

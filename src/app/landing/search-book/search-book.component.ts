@@ -26,7 +26,7 @@ export class SearchBookComponent implements OnInit {
   }
 
   list(){
-    this.router.navigate(['landing']);
+    this.router.navigate(['home']);
   }
 
 }

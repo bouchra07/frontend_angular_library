@@ -37,6 +37,6 @@ export class CreateBookComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/landing']);
+    this.router.navigate(['/home']);
   }
 }

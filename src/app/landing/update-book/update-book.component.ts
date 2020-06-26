@@ -44,6 +44,6 @@ export class UpdateBookComponent implements OnInit {
   }
 
   list(){
-    this.router.navigate(['landing']);
+    this.router.navigate(['home']);
   }
 }
