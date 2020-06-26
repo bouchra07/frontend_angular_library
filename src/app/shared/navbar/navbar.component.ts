@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Location, PopStateEvent } from '@angular/common';
+import { TokenStorageService } from '../../_services/token-storage.service';
 
 @Component({
     selector: 'app-navbar',
@@ -8,14 +9,26 @@ import { Location, PopStateEvent } from '@angular/common';
     styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
+    isLoggedIn = false;
+    username: string;
+
     public isCollapsed = true;
     private lastPoppedUrl: string;
     private yScrollStack: number[] = [];
 
-    constructor(public location: Location, private router: Router) {
+    constructor(private tokenStorageService: TokenStorageService,public location: Location, private router: Router) {
     }
 
     ngOnInit() {
+
+        this.isLoggedIn = !!this.tokenStorageService.getToken();
+
+        if (this.isLoggedIn) {
+        const user = this.tokenStorageService.getUser();
+        this.username = user.username;
+        }
+
       this.router.events.subscribe((event) => {
         this.isCollapsed = true;
         if (event instanceof NavigationStart) {
@@ -44,13 +57,16 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
-    isDocumentation() {
-        var titlee = this.location.prepareExternalUrl(this.location.path());
-        if( titlee === '#/documentation' ) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
+
+    logout() {
+        this.tokenStorageService.signOut();
+        
+      }
+
+      
+
+      
+
+      
+    
 }

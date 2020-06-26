@@ -19,6 +19,9 @@ import { BookDetailsComponent } from './home/book-details/book-details.component
 import { UpdateBookComponent } from './home/update-book/update-book.component';
 import { SearchBookComponent } from './home/search-book/search-book.component';
 
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +44,7 @@ import { SearchBookComponent } from './home/search-book/search-book.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
