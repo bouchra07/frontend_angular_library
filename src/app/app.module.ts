@@ -7,34 +7,28 @@ import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
-import { LandingComponent } from './landing/landing.component';
-import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
-import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
-import { CreateBookComponent } from './landing/create-book/create-book.component';
+import { CreateBookComponent } from './home/create-book/create-book.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BookListComponent } from './landing/book-list/book-list.component';
-import { BookDeatilsComponent } from './landing/book-deatils/book-deatils.component';
-import { BookDetailsComponent } from './landing/book-details/book-details.component';
-import { UpdateBookComponent } from './landing/update-book/update-book.component';
-import { SearchBookComponent } from './landing/search-book/search-book.component';
+import { BookListComponent } from './home/book-list/book-list.component';
+import { BookDetailsComponent } from './home/book-details/book-details.component';
+import { UpdateBookComponent } from './home/update-book/update-book.component';
+import { SearchBookComponent } from './home/search-book/search-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    LandingComponent,
-    ProfileComponent,
+    HomeComponent,
     NavbarComponent,
     FooterComponent,
     LoginComponent,
     CreateBookComponent,
     BookListComponent,
-    BookDeatilsComponent,
     BookDetailsComponent,
     UpdateBookComponent,
     SearchBookComponent
@@ -45,7 +39,6 @@ import { SearchBookComponent } from './landing/search-book/search-book.component
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule,
     HttpClientModule
   ],
   providers: [],
